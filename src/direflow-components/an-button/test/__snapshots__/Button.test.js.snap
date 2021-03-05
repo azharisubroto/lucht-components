@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot as expected 1`] = `
+<button
+  className="an-button primary"
+  onClick={[Function]}
+>
+  Button Text
+</button>
+`;

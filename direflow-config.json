@@ -1,0 +1,12 @@
+{
+  "build": {
+    "componentPath": "direflow-components",
+    "filename": "direflowBundle.js",
+    "chunkFilename": "chunk.js",
+    "emitSourceMap": true,
+    "emitIndexHTML": true,
+    "emitAll": true,
+    "split": true,
+    "vendor": true
+  }
+}
