@@ -5,6 +5,9 @@ const { webpackConfig } = require('direflow-scripts')
  * Additional webpack plugins / overrides can be provided here
  */
 module.exports = (config, env) => ({
-  ...webpackConfig(config, env)
+  ...webpackConfig(config, env, {
+    react: false,
+    reactDOM: false
+  })
   // Add your own webpack config here (optional)
 })
