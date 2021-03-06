@@ -6,7 +6,6 @@
  * Web Component once it's mounted on the DOM.
  *
  * !This file cannot be removed.
- * It can be left blank if not needed.
  */
 
 import LuchtComponents from './direflow-components/lucht-components'
