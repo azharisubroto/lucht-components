@@ -7,12 +7,3 @@
  *
  * !This file cannot be removed.
  */
-
-import LuchtComponents from './direflow-components/lucht-components'
-
-LuchtComponents.then((element) => {
-  /**
-   * Access DOM node when it's mounted
-   */
-  console.log('lucht-components is mounted on the DOM', element)
-})

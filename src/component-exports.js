@@ -9,7 +9,6 @@
  * this file can be safely deleted.
  */
 
-import App from './direflow-components/lucht-components/App'
 import Button from './direflow-components/an-button/Button'
 
-export { App, Button }
+export { Button }
