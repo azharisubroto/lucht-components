@@ -10,5 +10,10 @@
   "modules": {
     "react": "https://unpkg.com/react@16.14.0/umd/react.production.min.js",
     "reactDOM": "https://unpkg.com/react-dom@16.14.0/umd/react-dom.production.min.js"
-  }
+  },
+  "plugins": [
+    {
+      "name": "styled-components"
+    }
+  ]
 }

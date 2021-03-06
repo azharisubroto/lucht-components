@@ -28,7 +28,8 @@
     "build:lib": "direflow-scripts build:lib",
     "test": "direflow-scripts test",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook --docs"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",

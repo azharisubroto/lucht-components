@@ -1,4 +1,4 @@
-.an-button {
+.Button_an-button__3tILr {
   display: inline-block;
   transition: all 0.2s ease-in;
   padding: 0.9375rem 1.6625rem;
@@ -14,20 +14,22 @@
   outline: none;
 }
 
-.an-button.primary {
+.Button_an-button__3tILr.Button_primary__1ZcWQ {
   background: #2d53fe;
   box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
 }
 
-.an-button.primary:hover {
+.Button_an-button__3tILr.Button_primary__1ZcWQ:hover {
   background-color: #012ef7;
 }
 
-.an-button.secondary {
+.Button_an-button__3tILr.Button_secondary__3w0e_ {
   background: #cecece;
   box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(135, 135, 135, 0.2);
 }
 
-.an-button.secondary:hover {
+.Button_an-button__3tILr.Button_secondary__3w0e_:hover {
   background-color: #c2c2c2;
 }
+
+/*# sourceMappingURL=main.8958e5d1.chunk.css.map*/

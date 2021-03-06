@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { EventContext } from 'direflow-component'
-import styles from './Button.module.css'
+import { EventContext, Styled } from 'direflow-component'
+import styles from './Button.css'
 
 const Button = ({ color, content }) => {
   const dispatch = useContext(EventContext)
@@ -12,11 +12,11 @@ const Button = ({ color, content }) => {
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className={[`${styles['an-button']}`, `${color ? ` ${styles[color]}` : ''}`].join(' ')}>
-      {content}
-    </button>
+    <Styled styles={styles}>
+      <button onClick={handleClick} className={[`an-button`, `${color ? `primary` : ''}`].join(' ')}>
+        {content}
+      </button>
+    </Styled>
   )
 }
 

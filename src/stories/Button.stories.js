@@ -1,9 +1,8 @@
 import React from 'react'
-
 import { Button } from '../component-exports'
 
 export default {
-  title: 'Example/Button',
+  title: 'Component/Button',
   component: Button,
   argTypes: {
     color: {
