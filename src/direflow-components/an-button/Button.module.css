@@ -22,3 +22,12 @@
 .an-button.primary:hover {
   background-color: #012ef7;
 }
+
+.an-button.secondary {
+  background: #cecece;
+  box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(135, 135, 135, 0.2);
+}
+
+.an-button.secondary:hover {
+  background-color: #c2c2c2;
+}

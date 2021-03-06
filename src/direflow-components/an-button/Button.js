@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { EventContext, Styled } from 'direflow-component'
-import styles from './Button.css'
+import { EventContext } from 'direflow-component'
+import styles from './Button.module.css'
 
-const Button = (props) => {
+const Button = ({ color, content }) => {
   const dispatch = useContext(EventContext)
 
   const handleClick = () => {
@@ -12,22 +12,25 @@ const Button = (props) => {
   }
 
   return (
-    <Styled styles={styles}>
-      <button onClick={handleClick} className={`an-button${props.color ? ` ${props.color}` : ''}`}>
-        {props.content}
-      </button>
-    </Styled>
+    <button
+      onClick={handleClick}
+      className={[`${styles['an-button']}`, `${color ? ` ${styles[color]}` : ''}`].join(' ')}>
+      {content}
+    </button>
   )
 }
 
 Button.defaultProps = {
   color: 'primary',
-  content: 'My Button'
+  content: 'My Button',
+  onClick: undefined
 }
 
 Button.propTypes = {
-  content: PropTypes.any,
-  color: PropTypes.string
+  content: PropTypes.any.isRequired,
+  color: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default Button
+// export default withStyles(styles)(Button)
