@@ -15,8 +15,8 @@
     "url": "https://github.com/azharisubroto/lucht-components"
   },
   "bugs": {
-    "email": "azhari.subroto@gmail.com.com",
-    "url": "https://github.com/Silind-Software/direflow/issues/new"
+    "email": "azhari.subroto@gmail.com",
+    "url": "https://github.com/azharisubroto/lucht-components/issues/new"
   },
   "main": "build/direflowBundle.js",
   "files": [
@@ -43,9 +43,9 @@
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jest-environment-jsdom-fourteen": "0.1.0",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
-    "jest-environment-jsdom-fourteen": "0.1.0",
     "react-app-rewired": "2.1.3",
     "react-test-renderer": "16.9.0",
     "to-string-loader": "^1.1.6",
@@ -71,7 +71,7 @@
   "config-overrides-path": "direflow-webpack.js",
   "bit": {
     "env": {},
-    "componentsDefaultDirectory": "components/{name}",
+    "componentsDefaultDirectory": "src/direflow-components/{name}",
     "packageManager": "npm"
   }
 }
