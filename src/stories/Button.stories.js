@@ -25,11 +25,5 @@ const Template = (args) => <Button {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
   color: 'primary',
-  content: 'Primary Button'
-}
-
-export const Secondary = Template.bind({})
-Secondary.args = {
-  color: 'secondary',
-  content: 'Secondary Button'
+  content: 'Button'
 }
