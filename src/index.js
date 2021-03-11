@@ -7,3 +7,11 @@
  *
  * !This file cannot be removed.
  */
+import Button from './direflow-components/an-button'
+
+Button.then((element) => {
+  /**
+   * Access DOM node when it's mounted
+   */
+  console.log('an-button is mounted on the DOM', element)
+})

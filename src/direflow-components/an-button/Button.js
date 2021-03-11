@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { EventContext } from 'direflow-component'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const StyledButton = styled.button`
-  display: inline-block;
+const StyledButton = styled.div`
+  display: inline-flex;
+  font-family: sans-serif;
   transition: all 0.2s ease-in;
-  padding: 0.9375rem 1.6625rem;
+  height: auto;
   border: none;
   border-radius: 50px;
   background: #fff;
@@ -17,6 +18,18 @@ const StyledButton = styled.button`
   outline: none;
   cursor: pointer;
   letter-spacing: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+
+  ${(props) =>
+    props.height
+      ? css`
+          height: ${props.height}px;
+        `
+      : css`
+          height: 47px;
+        `}
 
   &.primary {
     background: #2d53fe;
@@ -37,32 +50,33 @@ const StyledButton = styled.button`
   }
 `
 
-const Button = ({ color, content }) => {
+const Button = ({ color, text, children, ...other }) => {
   const dispatch = useContext(EventContext)
 
   const handleClick = () => {
-    const event = new Event('an-button-event')
+    const event = new Event('an-onClick')
     dispatch(event)
   }
 
   return (
-    <StyledButton onClick={handleClick} className={[`${color ? color : 'secondary'}`].join(' ')}>
-      {content}
+    <StyledButton {...other} onClick={handleClick} className={[`${color ? color : 'secondary'}`].join(' ')}>
+      {!text && !children ? <slot name="content"></slot> : <>{text ? text : children}</>}
     </StyledButton>
   )
 }
 
 Button.defaultProps = {
   color: 'primary',
-  content: 'Button',
+  children: undefined,
+  text: '',
   onClick: undefined
 }
 
 Button.propTypes = {
-  content: PropTypes.any.isRequired,
   color: PropTypes.string,
+  children: PropTypes.node,
+  text: PropTypes.string,
   onClick: PropTypes.func
 }
 
 export default Button
-// export default withStyles(styles)(Button)

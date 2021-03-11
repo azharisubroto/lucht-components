@@ -1,14 +1,14 @@
 import { DireflowComponent } from 'direflow-component'
-import Button from './Button'
+import Card from './Card'
 
 export default DireflowComponent.create({
-  component: Button,
+  component: Card,
   configuration: {
-    tagname: 'an-button',
+    tagname: 'an-card',
     useShadow: true
   },
   properties: {
-    color: 'primary'
+    children: ''
   },
   plugins: [
     {

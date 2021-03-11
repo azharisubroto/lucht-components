@@ -12,7 +12,7 @@ export default {
         options: ['primary', 'secondary']
       }
     },
-    content: {
+    text: {
       control: {
         type: 'text'
       }
@@ -20,10 +20,13 @@ export default {
   }
 }
 
-const Template = (args) => <Button {...args} />
+const Template = (args) => (
+  <Button {...args}>
+    <React.Fragment slot="content">My Button</React.Fragment>
+  </Button>
+)
 
 export const Primary = Template.bind({})
 Primary.args = {
-  color: 'primary',
-  content: 'Button'
+  color: 'primary'
 }

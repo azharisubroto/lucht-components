@@ -10,5 +10,6 @@
  */
 
 import Button from './direflow-components/an-button/Button'
+import Card from './direflow-components/an-card/Card'
 
-export { Button }
+export { Button, Card }
