@@ -2,7 +2,7 @@
   "build": {
     "componentPath": "direflow-components",
     "emitSourceMap": false,
-    "emitIndexHTML": true,
+    "emitIndexHTML": false,
     "emitAll": false,
     "split": true,
     "vendor": true
@@ -14,16 +14,11 @@
   "plugins": [
     {
       "name": "styled-components"
-    },
-    {
-      "name": "polyfill-loader",
-      "options": {
-        "use": {
-          "sd": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.4.1/bundles/webcomponents-sd.js",
-          "ce": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.4.1/bundles/webcomponents-ce.js",
-          "adapter": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.4.1/custom-elements-es5-adapter.js"
-        }
-      }
     }
-  ]
+  ],
+  "polyfills": {
+    "sd": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/bundles/webcomponents-sd.js",
+    "ce": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/bundles/webcomponents-ce.js",
+    "adapter": "https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js"
+  }
 }

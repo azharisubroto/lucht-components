@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '../component-exports'
 
 export default {
-  title: 'Component/Button',
+  title: 'Component/Inputs/Button',
   component: Button,
   argTypes: {
     color: {
@@ -20,13 +20,14 @@ export default {
   }
 }
 
-const Template = (args) => (
-  <Button {...args}>
-    <React.Fragment slot="content">My Button</React.Fragment>
-  </Button>
-)
+const Template = (args) => <Button {...args}>My Button</Button>
 
 export const Primary = Template.bind({})
 Primary.args = {
   color: 'primary'
+}
+
+export const CustomHeight = Template.bind({})
+CustomHeight.args = {
+  height: 70
 }

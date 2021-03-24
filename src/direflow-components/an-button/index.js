@@ -8,7 +8,8 @@ export default DireflowComponent.create({
     useShadow: true
   },
   properties: {
-    color: 'primary'
+    color: 'primary',
+    text: ''
   },
   plugins: [
     {

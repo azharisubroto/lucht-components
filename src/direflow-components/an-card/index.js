@@ -8,7 +8,7 @@ export default DireflowComponent.create({
     useShadow: true
   },
   properties: {
-    children: ''
+    padding: '20px'
   },
   plugins: [
     {

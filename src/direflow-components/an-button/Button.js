@@ -5,13 +5,10 @@ import styled, { css } from 'styled-components'
 
 const StyledButton = styled.div`
   display: inline-flex;
-  font-family: sans-serif;
   transition: all 0.2s ease-in;
-  height: auto;
   border: none;
   border-radius: 50px;
   background: #fff;
-  color: #181d27;
   line-height: 1;
   font-weight: 500;
   color: #fff;
@@ -60,16 +57,18 @@ const Button = ({ color, text, children, ...other }) => {
 
   return (
     <StyledButton {...other} onClick={handleClick} className={[`${color ? color : 'secondary'}`].join(' ')}>
-      {!text && !children ? <slot name="content"></slot> : <>{text ? text : children}</>}
+      {!children ? (
+        <>
+          <slot name="content"></slot>
+        </>
+      ) : (
+        <>
+          {children && children}
+          {text && text}
+        </>
+      )}
     </StyledButton>
   )
-}
-
-Button.defaultProps = {
-  color: 'primary',
-  children: undefined,
-  text: '',
-  onClick: undefined
 }
 
 Button.propTypes = {
